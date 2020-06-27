@@ -1,0 +1,7 @@
+{
+  "name": "VidaPescador",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
