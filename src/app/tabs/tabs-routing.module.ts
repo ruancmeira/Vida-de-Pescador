@@ -12,6 +12,10 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
+        path: 'tabPerfil',
+        loadChildren: () => import('../perfil/perfil.module').then(m => m.PerfilPageModule)
+      },
+      {
         path: 'tabMapa',
         loadChildren: () => import('../mapa/mapa.module').then(m => m.MapaPageModule)
       },

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+      <ion-title>Adicionar post</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button slot="end" (click)="closeModal()">voltar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-textarea placeholder="Digite informações sobre seu post" rows="5"></ion-textarea>
+    </ion-item>    
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,9 +1,51 @@
 <ion-header>
   <ion-toolbar class="ion-text-center" color="primary">
-    <ion-title>LOGO</ion-title>
+    <ion-title><img src="assets/img/LogoMenu.png"></ion-title>
   </ion-toolbar>
 </ion-header>
+<!-- <ion-tabs>
+  <ion-tab-bar slot="top">
+    <ion-tab-button tab="tabPerfil">
+      <ion-label>FEED</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tabPerfil" layout="icon-start">
+      <ion-label>PERFIL</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs> -->
 
 <ion-content>
+  <ion-card *ngFor="let post of postsData"> 
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/img/user.svg">
+      </ion-avatar>
+      <ion-label class="ion-text-wrap">
+        <ion-text color="dark"><h3>Post feito por Ruan </h3></ion-text>
+        <!-- <p>{{ post.name }}</p> -->
+      </ion-label>
+    </ion-item>
 
+    <ion-card-content>
+            {{ post.description }}
+    </ion-card-content>
+    
+    <ion-item>
+      <ion-img src="assets/img/imagem_1.jpg"></ion-img>
+    </ion-item>
+
+    <ion-item>
+      <ion-button slot="start" fill="clear">
+        <ion-icon name="thumbs-up-sharp"></ion-icon>
+      </ion-button>
+      <ion-button horizontal="end" slot="end" fill="clear">comentários</ion-button>
+    </ion-item>
+  </ion-card>
+
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button size="large" (click)="openModal()"><ion-icon name="add"></ion-icon></ion-fab-button>
+  </ion-fab>
 </ion-content>
