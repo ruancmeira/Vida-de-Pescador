@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-  <form>
+  <form [formGroup]="insertPostForm" method="POST">
     <ion-item lines="full">
       <ion-label position="floating">Descrição</ion-label>
       <ion-textarea placeholder="Digite informações sobre seu post" rows="5"></ion-textarea>
@@ -18,7 +18,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
+        <ion-button type="submit" color="primary" expand="block" (click)="insertPost()">Enviar</ion-button>
       </ion-col>
     </ion-row>
   </form>

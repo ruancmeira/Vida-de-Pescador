@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import {
   ModalController,
   NavParams
@@ -14,6 +15,7 @@ export class FormPostComponent implements OnInit {
 
   modalTitle: string;
   modelId: number;
+  insertPostForm: FormGroup;
 
   constructor(
     private modalController: ModalController,
@@ -29,6 +31,10 @@ export class FormPostComponent implements OnInit {
   async closeModal() {
     const onClosedData: string = "Wrapped Up!";
     await this.modalController.dismiss(onClosedData);
+  }
+
+  insertPost() {
+    console.log('teste', this.insertPostForm.value);
   }
 
 }
